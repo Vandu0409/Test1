@@ -1,7 +1,6 @@
 # include <stdio.h>
 void main ()
 {
-  fact();
-  reverse();
+  add();
   big3();
 }
