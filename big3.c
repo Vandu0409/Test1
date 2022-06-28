@@ -1,17 +1,25 @@
-#!/bin/bash/
-
-num1=$1
-num2=$2
-num3=$3
-
-if [ $# -ne 3 ]; then
-	echo "Enter three numbers"
-elif [ $num1 -eq $num2 ] && [ $num1 -eq $num3 ]; then
-	echo "All the numbers are equal"
-elif [ $num1 -ge $num2 ] && [ $num1 -ge $num3 ]; then
-	echo "$num1 is greatest of all"
-elif [ $num2 -ge $num3 ]; then
-	echo "$num2 is greatest of all"
-else
-	echo "$num3 is greatest of all"
-fi
+#include <stdio.h>
+ 
+void big3()
+{
+    int num1, num2, num3;
+ 
+    printf("Enter the values of num1, num2 and num3\n");
+    scanf("%d %d %d", &num1, &num2, &num3);
+    printf("num1 = %d\tnum2 = %d\tnum3 = %d\n", num1, num2, num3);
+    if (num1 > num2)
+    {
+        if (num1 > num3)
+        {
+            printf("num1 is the greatest among three \n");
+        }
+        else
+        {
+            printf("num3 is the greatest among three \n");
+        }
+    }
+    else if (num2 > num3)
+        printf("num2 is the greatest among three \n");
+    else
+        printf("num3 is the greatest among three \n");
+}
